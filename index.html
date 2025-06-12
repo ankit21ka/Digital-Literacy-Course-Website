@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital Literacy Course (DLC)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header role="banner" aria-label="Primary site header">
+    <div class="logo" tabindex="0">DLC - Digital Literacy Course</div>
+    <nav role="navigation" aria-label="Primary navigation">
+      <a href="#home" aria-current="page">Home</a>
+      <a href="#tutorials">Tutorials</a>
+      <a href="#aichat">AI Chat</a>
+      <a href="#feedback">Feedback</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home Section -->
+    <section id="home" tabindex="0" aria-labelledby="home-title" class="home-hero">
+      <h1 id="home-title" lang="en">Empowering Digital Literacy!</h1>
+      <p lang="en">Welcome to the Digital Literacy Course, designed especially for parents and elderly users to easily learn the digital tools they need in today’s world. Explore tutorials, ask DigiBuddy your questions, and give us feedback to keep improving!</p>
+      <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/30bcf2bc-3f86-40cf-9b98-4cf18c7c381b.png" alt="Elderly person happily using a tablet with a sunny cozy room background" />
+    </section>
+
+    <!-- Tutorials Section -->
+    <section id="tutorials" tabindex="0" aria-labelledby="tutorials-title" >
+      <h2 class="section-title" id="tutorials-title">Tutorials</h2>
+      <div class="tutorials-grid" role="list">
+        <article class="tutorial-card" role="listitem" tabindex="0" aria-label="WhatsApp tutorial">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cd2cf97e-f8c7-471b-85f7-b1becb67071e.png" alt="WhatsApp app interface on smartphone" loading="lazy" class="tutorial-image" />
+          <div class="tutorial-content">
+            <h3 class="tutorial-title">WhatsApp Basics</h3>
+            <p class="tutorial-desc">Learn how to send messages, make calls, and share photos with family and friends using WhatsApp.</p>
+            <button class="btn-learn" aria-describedby="desc-wapp">Learn More</button>
+          </div>
+        </article>
+        <article class="tutorial-card" role="listitem" tabindex="0" aria-label="Paytm tutorial">
+          <img src="https://imgs.search.brave.com/XGWUDO7oOoNjVF4WTb-587a1rsVgMuzxtp0DRZkv1Xs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudG9paW1nLmNv/bS90aHVtYi9tc2lk/LTEwNjYyMTA2OCxp/bWdzaXplLTE1MjY2/LHdpZHRoLTQwMCxy/ZXNpemVtb2RlLTQv/MTA2NjIxMDY4Lmpw/Zw" alt="Paytm mobile app screen showing wallet and payment options" loading="lazy" class="tutorial-image" />
+          <div class="tutorial-content">
+            <h3 class="tutorial-title">Paytm Payments</h3>
+            <p class="tutorial-desc">Step-by-step guide to use Paytm for mobile recharges, bill payments, and easy money transfer.</p>
+            <button class="btn-learn" aria-describedby="desc-paytm">Learn More</button>
+          </div>
+        </article>
+        <article class="tutorial-card" role="listitem" tabindex="0" aria-label="Google Maps tutorial">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/babb21c2-7944-48cd-be9e-50e858b2b73e.png" alt="Google Maps app screen showing a map with navigation" loading="lazy" class="tutorial-image" />
+          <div class="tutorial-content">
+            <h3 class="tutorial-title">Google Maps</h3>
+            <p class="tutorial-desc">Find directions, explore nearby places, and learn to navigate using Google Maps on your smartphone.</p>
+            <button class="btn-learn" aria-describedby="desc-gmaps">Learn More</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- AI Chatbot Section -->
+    <section id="aichat" tabindex="0" aria-labelledby="aichat-title" style="margin-top:96px;">
+      <h2 class="section-title" id="aichat-title">Ask DigiBuddy - Your Digital Assistant</h2>
+      <p style="text-align: center; max-width: 680px; margin: 0 auto 24px;">DigiBuddy is here to answer your questions about digital tools and help you learn more effectively. Click the chat icon at the bottom right to start chatting!</p>
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedback" tabindex="0" aria-labelledby="feedback-title">
+      <form id="feedback-form" aria-label="User feedback form" novalidate>
+        <h2 id="feedback-title">Your Feedback</h2>
+        <label for="fb-name">Name</label>
+        <input type="text" id="fb-name" name="name" placeholder="Your name" required aria-required="true" />
+        <label for="fb-email">Email address</label>
+        <input type="email" id="fb-email" name="email" placeholder="your.email@example.com" required aria-required="true" />
+        <label for="fb-suggestions">Suggestions / Feedback</label>
+        <textarea id="fb-suggestions" name="feedback" placeholder="Let us know how we can improve..." required aria-required="true"></textarea>
+        <label for="fb-rating">How would you rate this course?</label>
+        <select id="fb-rating" name="rating" required aria-required="true">
+          <option value="" disabled selected>Select rating</option>
+          <option value="5">Excellent</option>
+          <option value="4">Good</option>
+          <option value="3">Average</option>
+          <option value="2">Below Average</option>
+          <option value="1">Poor</option>
+        </select>
+        <button type="submit" aria-label="Submit feedback form">Submit Feedback</button>
+        <p id="feedback-msg" role="alert" aria-live="polite" style="margin-top:12px; color:#00796b;"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Accessibility Controls -->
+  <div id="accessibility-controls" aria-label="Accessibility controls" role="region" tabindex="0">
+    <div id="font-size-control" role="group" aria-label="Adjust font size">
+      <button id="font-decrease" aria-label="Decrease font size" title="Decrease font size">A-</button>
+      <button id="font-increase" aria-label="Increase font size" title="Increase font size">A+</button>
+    </div>
+    <select id="language-select" aria-label="Select language" title="Select language">
+      <option value="en" selected>English</option>
+      <option value="hi">हिन्दी</option>
+      <option value="es">Español</option>
+    </select>
+    <button id="voice-command-btn" aria-pressed="false" aria-label="Activate voice commands and navigation" title="Activate voice commands">
+      <span class="material-icons" aria-hidden="true">keyboard_voice</span> Voice
+    </button>
+  </div>
+
+  <!-- Chatbot UI -->
+  <button id="chatbot-toggle-btn" aria-label="Open chat with DigiBuddy" title="Chat with DigiBuddy">
+    <span class="material-icons" aria-hidden="true">chat</span>
+  </button>
+  <div id="chatbot-container" class="hidden" role="complementary" aria-label="Chatbot DigiBuddy interface" aria-live="polite" aria-atomic="false">
+    <div id="chatbot-header">
+      DigiBuddy
+      <button id="chatbot-close-btn" aria-label="Close chat" title="Close chat" style="background:none;border:none;color:white;font-size:20px;cursor:pointer;">&times;</button>
+    </div>
+    <div id="chatbot-messages" role="log" tabindex="0" aria-live="polite" aria-relevant="additions"></div>
+    <form id="chatbot-input-container" aria-label="Send message to DigiBuddy" autocomplete="off">
+      <input type="text" id="chatbot-input" aria-label="Type your question here" placeholder="Ask me anything about digital tools..." autocomplete="off" required />
+      <button type="submit" id="chatbot-send-btn" aria-label="Send message">Send</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
